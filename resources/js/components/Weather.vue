@@ -115,14 +115,12 @@
         },
         data(){
             return{
-              
+                time:'',
                 currentTemp:{
                     actual:'',
                     feels:'',
                     summary:'',
-                    icon:'',
-                    time:'',
-
+                    icon:''
                 },
                 daily:[],
                 filter:[],
@@ -142,8 +140,7 @@
                 .then(data => {
                  
                    this.filter = data.response.groups[0].items
-                   console.log(data.response.groups[0].items[0].venue.name)
-                   console.log(this.filter)
+                   
                 }
                 )
             },
@@ -169,7 +166,7 @@
                     this.currentTemp.icon = 'http://openweathermap.org/img/wn/'+ data.current.weather[0].icon + '@2x.png'
                     this.daily=data.daily
                     this.time = new Date().toLocaleString('en-US', { timeZone: data.timezone })
-                    console.log(this.time)
+                  
                 }
                 )
             },
