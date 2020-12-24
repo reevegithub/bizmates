@@ -1,4 +1,7 @@
 # bizmates-weather
+
+![bizmates](https://user-images.githubusercontent.com/40732088/103063674-00ec8b80-45ed-11eb-96f8-71049063d9e0.png)
+
  bizmates exam
  
  coded by Reeve Callejo
