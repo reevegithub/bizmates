@@ -1988,8 +1988,8 @@ __webpack_require__.r(__webpack_exports__);
     this.fetchData();
     this.searchVenue();
     var placesAutocomplete = places({
-      appId: 'pl7VXJ7R6HUM',
-      apiKey: 'ed4d42e6a7a1742e72156ca2c1638182',
+      appId: 'plO920E0AVIV',
+      apiKey: 'dc6f12b7212ff13035caef0cdadc4d3c',
       container: document.querySelector('#address')
     }).configure({
       type: 'city',
@@ -2018,7 +2018,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     dailyFiveDays: function dailyFiveDays() {
       return this.daily.filter(function (day, index) {
-        return index < 5;
+        return index < 3;
       });
     },
     popular: function popular() {
@@ -2029,12 +2029,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
+      time: '',
       currentTemp: {
         actual: '',
         feels: '',
         summary: '',
-        icon: '',
-        time: ''
+        icon: ''
       },
       daily: [],
       filter: [],
@@ -2053,8 +2053,6 @@ __webpack_require__.r(__webpack_exports__);
         return response.json();
       }).then(function (data) {
         _this2.filter = data.response.groups[0].items;
-        console.log(data.response.groups[0].items[0].venue.name);
-        console.log(_this2.filter);
       });
     },
     itemSelected: function itemSelected(item) {
@@ -2083,7 +2081,6 @@ __webpack_require__.r(__webpack_exports__);
         _this3.time = new Date().toLocaleString('en-US', {
           timeZone: data.timezone
         });
-        console.log(_this3.time);
       });
     },
     toDayOfWeek: function toDayOfWeek(timestamp) {

@@ -78,8 +78,8 @@
             this.fetchData()
             this.searchVenue()
             var placesAutocomplete = places({
-                appId: 'pl7VXJ7R6HUM',
-                apiKey: 'ed4d42e6a7a1742e72156ca2c1638182',
+                appId: 'plO920E0AVIV',
+                apiKey: 'dc6f12b7212ff13035caef0cdadc4d3c',
                 container: document.querySelector('#address')
                     }).configure({
                         type: 'city',
@@ -107,10 +107,10 @@
         },
           computed: {
             dailyFiveDays() {
-            return this.daily.filter((day, index) => index < 5 )
+            return this.daily.filter((day, index) => index < 3 )
             },
             popular() {
-            return this.filter.filter((pop, index) => index <5 )
+            return this.filter.filter((pop, index) => index < 3 )
             }
         },
         data(){
